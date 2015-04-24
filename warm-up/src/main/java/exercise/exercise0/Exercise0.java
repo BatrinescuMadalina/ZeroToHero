@@ -20,25 +20,26 @@ public class Exercise0 {
 
         // TODO Exercise #0 a) Create a list (ArrayList or LinkedList) and add elements to it
         // TODO Exercise #0 a) Hint: Don't forget to specify the type of the list (Integer, String etc.)
-        ArrayList<String> lista = new ArrayList();
-            for (int i = 0; i < lista.size(); i++) {
-            lista.add("Element");
+        ArrayList<Integer> lista= new ArrayList<Integer>();
+        for(int i=0;i<7;i++)
+        {
+            lista.add(i*i);
         }
 
         // TODO Exercise #0 b) Iterate through the list using ListIterator and print all its elements
-        ListIterator<String> li=lista.listIterator();
-             while(li.hasNext())
-        {
-            System.out.println(lista);
+        ListIterator<Integer> it=lista.listIterator();
+        while(it.hasNext()){
+            System.out.println(it.next());
         }
+
         // TODO Exercise #0 c) Iterate through the list using classic for loop and print all its elements
         for(int i=0;i<lista.size();i++)
         {
-            System.out.println(lista);
+            System.out.println(lista.get(i));
         }
         // TODO Exercise #0 d) Iterate through the list using foreach loop and print all its elements
-        for (String s :lista){
-            s.toString();
+        for(Integer l:lista){
+            System.out.println(l);
         }
 
 
